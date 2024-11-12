@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+:root{
+    --color: #000000;
+    --bg-color:#ffffff;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+nav{
+    background-color: transparent;
+}
+#bg-img{
+    width: 100%;
+    position: relative;
+    height: 52vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color);
+}
+#bg-img img{
+    width: 20vw;
+    position: absolute;
+    right: 40%;
+}
+#bg-img h3{
+    font-size: 9vw;
+    position: relative;
+
+}
+#bg-img h3::after{
+    content: "About Us";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--bg-color);
+}
+
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+}
+#aboutpage1{
+    width:75%;
+    height: 200vh;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: -10vh;
+    left:15%;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid red; */
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    justify-content: center;
+    height: 80%;
+}
+.text h1, .text p{
+    
+    color: var(--color);
+}
+.text h1{
+    font-size: 3vw;   
+    font-weight: 500;
+    margin: 2vw 4vw;
+    position: relative;
+}
+.text h1::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: var(--color);
+    width: 30%;
+    bottom: -5px;
+    border-radius: 100px;
+}
+.text p{
+    margin-left: 4vw;
+    margin-right: 2vw;
+    font-size: 1.2vw;
+}
+.first-img{
+    width: 40vw;
+    height: 80%;
+    background-color: rgb(0, 0, 0);
+}
+.first-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.first,.second{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+}
+.first::before{
+    left: 0;
+    top: 30%;
+    content: '';
+    position: absolute;
+    background-color: var(--color);
+    width: 4px;
+    height: 40%;
+    border-radius: 100px;
+}
+.second{
+    flex-direction: row-reverse;
+}
+.second::before{
+    right: 0;
+    top: 30%;
+    content: '';
+    position: absolute;
+    background-color: var(--color);
+    width: 4px;
+    height: 40%;
+}
+
+
+.members{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 20vh;
+}
+.members h1, .members p, .img-elem h1, .img-elem p{
+    
+    color: var(--color);
+}
+.members h1{
+    font-size: 3vw;   
+    font-weight: 500;
+    margin: 2vw 4vw;
+    position: relative;
+}
+.members h1::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    background-color: var(--color);
+    width: 30%;
+    bottom: -5px;
+    border-radius: 100px;
+}
+
+.members p{
+    margin-left: 4vw;
+    margin-right: 2vw;
+    font-size: 1.2vw;
+}
+
+.members-img{
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    /* border: 2px solid red; */
+    margin: 20vh 0;
+}
+.members-img img{
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.img-elem{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 2vw;
+}
+.img-elem h1{
+    font-size: 3vw;
+}
+.img-elem p{
+    /* display: none; */
+    margin: 2.6vw 0;
+}
+.btn{
+    border: 2px solid var(--color);
+    color: var(--color);
+    background-color: transparent;
+    font-size: 1vw;
+    border-radius: 100px;
+    width: fit-content;
+    padding: 0.6vw 1.2vw;
+
+}
+
+.last{
+   margin-bottom: 60vh;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    opacity: 0;
+    left: 0;
+}
+
+
+
+
+@media screen and (max-width:750px){
+    #bg-img img {
+        width: 49vw;
+        position: absolute;
+        right: 0%;
+    }
+    .members-img {
+        height: 20vh;
+        margin: 12vh 0;
+    }
+    .img-elem h1 {
+        font-size: 4vw;
+    }
+    .members-img img {
+        height: 100%;
+    }
+    .members {
+        height: 1vh;
+        width: 100%;
+    }
+    .members h1 {
+        font-size: 5vw;
+    }
+    .img-elem p {
+        margin: 0.6vw 0;
+        font-size: 1.9vw;
+    }
+
+}

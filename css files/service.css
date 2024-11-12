@@ -1,0 +1,82 @@
+:root{
+    --color: #040D12;
+    --bg-color: #ffffff;
+}
+#cursor-blur{
+    z-index: 11;
+}
+.servicepage-container{
+    z-index: 99;
+}
+#aboutpage1 {
+    z-index: 9;
+}
+#bg-img h3::after{
+    content: "Our Services";
+    -webkit-text-stroke: 1px #fff;
+}
+body{
+    color: var(--color);
+    background: var(--bg-color);
+
+}
+#bg-img {
+    height: 55vh;
+}
+
+#aboutpage1{
+    width:80%;
+    height: fit-content;
+    background-color: var(--bg-color);
+    position: absolute;
+    top: -10vh;
+    left:10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2vw 4vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2.6vw;
+    /* border: 2px solid red; */
+}
+.servicepage-container{
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* border: 2px solid red; */
+    height: 20vw;
+    border-radius: 20px;
+    background-color: var(--color);
+
+}
+.servicepage-container i{
+    font-size: 8vw;
+}
+.servicepage-container h3{
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.last-elem{
+   height: 160vh;
+   width: 100%;
+
+}
+
+@media screen and (max-width:750px){
+    .servicepage-container {
+        width: 30vw;
+        height: 20vw;
+    }
+    .last-elem {
+        height: 110vh;
+    }
+    #bg-img img {
+        width: 50vw;
+        right: 4%;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css files/home.css">
+    <link rel="stylesheet" href="css files/about.css">
+    <link rel="stylesheet" href="css files/service.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"> -->
+    <title>Elearn Masters</title>
+</head>
+<body>
+    <div id="cursor">
+    </div>
+    <div id="cursor-blur">
+
+    </div>
+   <nav id="navbar">
+    <div class="logo" style="display: flex;">
+        <a href="home.html" style="text-decoration: none;">
+            <i style="margin-right: 1vw; font-size: 1.5vw;" class="ri-arrow-go-back-line"></i>
+        </a>
+        <h3>ELEARN</h3>
+    </div>
+    <label for="toggler"><i class="fa-solid fa-bars"></i></label>
+    <input type="checkbox" id="toggler" name="">
+    <div class="navbar-ul burger-res menu">
+        <ul class="list">
+            
+            <li><a href="course.html">Our Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+   </nav>
+   <div id="bg-img">
+    <h3>Our Services</h3>
+   <img src="imgs/service-bg-img.png" alt="">
+</div>
+
+
+   <main id="main">
+    <section id="aboutpage1">
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-html5-fill"></i>
+            </div>
+            <h3>Web Development</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-pencil-ruler-2-fill"></i>
+            </div>
+            <h3>Graphic Designing</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-user-voice-fill"></i>
+            </div>
+            <h3>Social Media Marketing</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-git-branch-fill"></i>
+            </div>
+            <h3>Affiliate Marketing</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-instagram-line"></i>
+            </div>
+            <h3>Instagram Ads</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-facebook-fill"></i>
+            </div>
+            <h3>Facebook Ads</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-movie-2-line"></i>
+            </div>
+            <h3>Video Editing</h3>
+        </div>
+        <div class="servicepage-container">
+            <div class="servicepage-img">
+                <i class="ri-mail-add-fill"></i>
+            </div>
+            <h3>Blogging</h3>
+        </div>
+        
+    </section>
+    <div class="last-elem"></div>
+
+    
+    
+</main>
+
+<footer>
+    <div class="logo footer-ul">
+        <h3>ELEARN</h3>
+        <div class="navbar-ul footer-li">
+            <ul>
+                <li><a href="course.html">Our Courses</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>Copyright Claim |  ELEARN.digital | All Rights Reserved </p>
+    </div>
+</footer>
+
+   <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script>
+    
+var cursorBlur = document.querySelector("#cursor-blur");
+var cursor = document.querySelector("#cursor");
+document.addEventListener("mousemove",function(details){
+    cursor.style.left = details.x + "px";
+    cursor.style.top = details.y + "px";
+    cursorBlur.style.left = details.x - 200+ "px";
+    cursorBlur.style.top = details.y - 200 + "px";
+
+})
+
+
+gsap.to("#navbar",{
+    backgroundColor : "#000",
+    duration: 0.5,
+    height:"50px",
+    scrollTrigger:{
+        trigger:"#navbar",
+        scroller:"body",
+        // markers: true,
+        start:"top -10%",
+        end:"top -11%",
+        scrub:1
+    }
+})
+
+gsap.to("footer",{
+    opacity:1,
+    duration:0.2,
+    scrollTrigger:{
+        trigger:".last-elem",
+        scroller:"body",
+        // markers:true,
+        start:"top top",
+        end:"bottom bottom",
+        scrub:0.5
+    }
+})
+   </script>
+
+<script src="https://kit.fontawesome.com/0a429eea15.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
